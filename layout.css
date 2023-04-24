@@ -8,6 +8,11 @@ body {
   background-color: #83c05b;
 }
 
+article {
+  padding: 1rem;
+  margin-block-end: 1rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -36,5 +41,16 @@ body {
   text-shadow: 0.12rem 0.1rem black;
 }
 
-.maincontainer {
+.maincontent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block-end: 1rem;
+}
+
+.maincontent > * {
+  background-color: white;
+  padding: 1rem;
+  flex-basis: 100%;
 }
