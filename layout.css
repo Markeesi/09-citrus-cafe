@@ -7,3 +7,34 @@ body {
   font-size: 1.6rem;
   background-color: #83c05b;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  max-width: 100%;
+}
+.navbar {
+  margin-block-end: 0.5rem;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.navbar ul > * {
+  border: solid green 1px;
+  border-radius: 1rem;
+  box-shadow: 1px 1px black;
+  text-align: center;
+  padding: 1rem;
+  background-color: #9dcd7c;
+  color: white;
+  text-shadow: 0.12rem 0.1rem black;
+}
+
+.maincontainer {
+}
