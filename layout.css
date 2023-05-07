@@ -12,11 +12,8 @@ article {
   padding: 1rem;
   margin-block-end: 1rem;
 }
-figure img {
-  max-width: 100%;
-}
 
-.container {
+.container-flex-wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -64,12 +61,129 @@ figure img {
   flex-direction: column;
   gap: 1rem;
 } */
+.vision {
+  padding: 1rem;
+  margin-block-end: 1rem;
+}
 
-.subcontent {
+.vision-inner-box {
+  display: none;
+}
+
+.boxes {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 1rem;
   background-color: #cbcbcb;
+}
+.boxes img {
+  max-width: 100%;
+}
+
+
+.news {
+  display: flex;
+  flex-direction: column;
+}
+
+.news ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.news ul li:first-child {
+  font-weight: 700;
+  width:  4rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.footer section p:nth-child(3) {
+  color: black;
+
+}
+
+@media screen and (min-width: 426px) {
+  /* NAVIGOINTI RIVIIN */
+  .navbar ul {
+    flex-direction: row;
+  }
+  /* NAVIGOINNIN LAPSISTA RUUDULLE SAMANKOKOISET */
+  .navbar ul > * {
+    flex-grow: 1;
+  }
+  /* VISIONLAATIKON TAUSTA VALKOISEKSI KOSKA PADDING */
+  .vision {
+    background-color: white;
+  }
+  /* VISION LAATIKKO FLEXATAAN RIVIIN JA EROTELLAAN TEKSTI JA KUVA
+  LISÄTÄÄN TAUSTAKUVA */
+  .vision-inner-box {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(./images/bg.jpg);
+    padding-inline-start: 1rem;
+  }
+  /* OTETAAN VISIONLAATIKON KUVA NÄKYVIIN TABLETTINÄKYMÄSSÄ */
+  .vision-inner-box figure {
+    display: block;
+    flex-basis: 50%;
+  }
+  /* SIIRRETÄÄN VISIONLAATIKON KUVA FIGURE-LAATIKON OIKEAAN REUNAAN */
+  .vision-inner-box figure img {
+    max-width: 100%;
+    float: right;
+  }
+  /* KESKITETÄÄN VISION-LAATIKON TEKSTI */
+  .vision p {
+    margin: auto 0 auto 0;
+    flex-basis: 80%;
+  }
+  /* POISTETAAN TABLETTINÄKYMÄSSÄ YLIMÄÄRÄISET VÄLIT */
+  .flex-main {
+    gap: 0;
+  }
+  /* KOLMESTA LAATIKOSTA KAKSI ENSIMMÄISTÄ PÄÄSEE VIEREKKÄIN */
+  .specials,
+  .events {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  /* YLIMÄÄRÄISIÄ VÄLEJÄ KORJAILLAAN */
+  .specials {
+    padding-inline-end: 0.5rem;
+  }
+  .events {
+    padding-inline-start: 0.5rem;
+  }
+  .news {
+    margin-block-start: 1rem;
+  }
+}
+  /* DESKTOP */
+
+@media screen and (min-width: 769px) {
+  /* KOKO SIVUN REUNOILLE PADDING */
+  body {
+    padding: 0 2rem 0 2rem;
+  }
+  /* YLIMÄÄRÄISIÄ VÄLEJÄ MUOKATAAN */
+  .events {
+    padding-inline-end: 0.5rem;
+  }
+  /* OTETAAN NEWS MUKAAN RIVIIN */
+  .news {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-block-start: 0;
+    padding-inline-start: 0.5rem;
+  }
 }
