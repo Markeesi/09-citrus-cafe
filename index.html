@@ -13,6 +13,10 @@
     />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="layout.css" />
+    <script
+      src="https://kit.fontawesome.com/fdb5ff4f55.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -21,11 +25,11 @@
       </header>
       <nav class="navbar">
         <ul>
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Reservations</li>
-          <li>Gallery</li>
-          <li>Contact</li>
+          <li a href="#">Home</li>
+          <li a href="#">Menu</li>
+          <li a href="#">Reservations</li>
+          <li a href="#">Gallery</li>
+          <li a href="#">Contact</li>
         </ul>
       </nav>
       <section class="maincontent">
@@ -35,14 +39,21 @@
           </section>
           <figure><img src="./assets/vision-image.png" alt="" /></figure>
         </article>
-        <article>
+        <article class="subcontent">
           <section class="specials">
-            <h1>Today's specials</h1>
+            <h1>
+              Today's specials
+              <span><i class="fa-solid fa-chevron-right"></i></span>
+            </h1>
           </section>
           <section class="events">
-            <h1>Events</h1>
+            <h1>Events <span><i class="fa-solid fa-chevron-right"></i></span>
+            </h1></h1>
           </section>
-          <section class="news"></section>
+          <section class="news">
+            <h1>News <span><i class="fa-solid fa-chevron-right"></i></span>
+            </h1></h1>
+          </section>
         </article>
       </section>
       <footer>
