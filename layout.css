@@ -75,13 +75,16 @@ article {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #cbcbcb;
 }
+
 .boxes img {
   max-width: 100%;
 }
-
+.boxes p {
+  background-color: #cbcbcb;
+  padding: 1rem;
+  margin: 1rem;
+}
 
 .news {
   display: flex;
@@ -127,7 +130,8 @@ article {
   /* VISION LAATIKKO FLEXATAAN RIVIIN JA EROTELLAAN TEKSTI JA KUVA
   LISÄTÄÄN TAUSTAKUVA */
   .vision-inner-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     justify-content: space-between;
     background-image: url(./images/bg.jpg);
     padding-inline-start: 1rem;
@@ -146,23 +150,56 @@ article {
   .vision p {
     margin: auto 0 auto 0;
     flex-basis: 80%;
+    font-size: 3.2rem;
   }
   /* POISTETAAN TABLETTINÄKYMÄSSÄ YLIMÄÄRÄISET VÄLIT */
   .flex-main {
     gap: 0;
   }
+
+  .background {
+    background-image: url(./assets/background.png);
+  }
+
   /* KOLMESTA LAATIKOSTA KAKSI ENSIMMÄISTÄ PÄÄSEE VIEREKKÄIN */
   .specials,
   .events {
     flex-basis: 0;
     flex-grow: 1;
   }
+
+.specials p,
+.events p {
+  display: flex;
+  align-items: center;
+}
+
+.specials img,
+.events img {
+  width: 97%; /* Set your desired width */
+  height: 380px; /* Set your desired height */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  margin-left: 1rem;
+
+}
+
+.news p,
+.news table {
+  display: flex;
+  align-items: center;
+}
+
+.news table {
+  width: 100%; 
+  margin-top: 1rem; 
+}
+
   /* YLIMÄÄRÄISIÄ VÄLEJÄ KORJAILLAAN */
   .specials {
-    padding-inline-end: 0.5rem;
+    padding-inline-end: 1rem;
   }
   .events {
-    padding-inline-start: 0.5rem;
+    padding-inline-start: 1rem;
   }
   .news {
     margin-block-start: 1rem;
@@ -184,6 +221,6 @@ article {
     flex-basis: 0;
     flex-grow: 1;
     margin-block-start: 0;
-    padding-inline-start: 0.5rem;
+    padding-inline-start: 1rem;
   }
 }
