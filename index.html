@@ -4,104 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Citrus Cafe</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./layout.css" />
     <script
-      src="https://kit.fontawesome.com/fdb5ff4f55.js"
+      src="https://kit.fontawesome.com/12a0adac89.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <section class="container-flex-wrapper">
-      <header class="logo">
-        <figure><img src="./assets/lrg_logo.png" alt="" /></figure>
+    <section class="flex-page-wrapper">
+      <header class="header">
+        <figure>
+          <img src="./assets/lrg_logo.png" alt="logo" />
+        </figure>
       </header>
       <nav class="navbar">
         <ul>
-          <li a href="#">Home</li>
-          <li a href="#">Menu</li>
-          <li a href="#">Reservations</li>
-          <li a href="#">Gallery</li>
-          <li a href="#">Contact</li>
+          <li>Home</li>
+          <li>Menu</li>
+          <li>Reservations</li>
+          <li>Gallery</li>
+          <li>Contact</li>
         </ul>
       </nav>
-      <section class="maincontent">
-        <article class="vision">
-          <section class="vision-inner-box background">
-            <p>A new neighborhood kitchen using organic and sustainable ingredients all locally sourced.</p>
-            <figure><img src="./assets/vision-image.png" alt="" /></figure>
-          </section>
-        </article>
-        <article class="boxes">
-          <section class="specials">
-            <section>
-              <p>
-                Today's specials
-                <span><i class="fa-solid fa-chevron-right"></i></span>
-              </p>
-            </section>
-            <figure>
-              <img src="./images/tasty.jpg" alt="tasty food"/>
-            </figure>
-          </section>
-          <section class="events">
-            <section>
-              <p>Events <span><i class="fa-solid fa-chevron-right"></i></span>
-              </p>
-            </section>
-            <figure>
-              <img src="./images/interior.jpg" alt="interior"/>
-            </figure>
-          </section>
-          <section class="news">
-            <section>
-              <p>News <span><i class="fa-solid fa-chevron-right"></i></span>
-              </p>
-            </section>
-            <section class="news">
-              <ul>
-                <li>9/1</li>
-                <li>Celebrity Guest Chef Night</li>
-              </ul>
-              <ul>
-                <li>9/3</li>
-                <li>New Menu Samplers!</li>
-              </ul>
-              <ul>
-                <li>9/4</li>
-                <li>Chef Citrus Style</li>
-              </ul>
-              <ul>
-                <li>9/23</li>
-                <li>Pork Pork and More Pork</li>
-              </ul>
-              <ul>
-                <li>10/1</li>
-                <li>Celebrity Guest Chef Night</li>
-              </ul>
-              <ul>
-                <li>10/3</li>
-                <li>New Menu Samplers!</li>
-              </ul>
-              <ul>
-                <li>10/4</li>
-                <li>Iron Chef Citrus Style</li>
-              </ul>
-            </section>
-          </section>
-        </article>
+      <section class="article">
+        <section class="article-inner-box">
+          <p>
+            A new neighborhood kitchen using organic and sustainable ingredients
+            all locally sourced.
+          </p>
+          <figure>
+            <img src="./assets/vision-image.png" alt="vision" />
+          </figure>
+        </section>
       </section>
-    </section>
+      <article class="flex-main">
+        <section class="specials">
+          <section class="box-headers">
+            <p>Todays Specials</p>
+            <p class="arrow">></p>
+          </section>
+          <figure class="box-images">
+            <img src="./images/tasty.jpg" alt="tasty" />
+          </figure>
+        </section>
+        <section class="events">
+          <section class="box-headers">
+            <p>Events</p>
+            <p class="arrow">></p>
+          </section>
+          <figure class="box-images">
+            <img src="./images/interior.jpg" alt="interior" />
+          </figure>
+        </section>
+        <section class="news">
+          <section class="box-headers">
+            <p>News</p>
+            <p class="arrow">></p>
+          </section>
+          <!-- NEWS LIST -->
+          <section class="newslist">
+            <ul>
+              <li>9/1</li>
+              <li>Celebrity Guest Chef Night</li>
+            </ul>
+            <ul>
+              <li>9/3</li>
+              <li>New Menu Samplers!</li>
+            </ul>
+            <ul>
+              <li>9/4</li>
+              <li>Chef Citrus Style</li>
+            </ul>
+            <ul>
+              <li>9/23</li>
+              <li>Pork Pork and More Pork</li>
+            </ul>
+            <ul>
+              <li>10/1</li>
+              <li>Celebrity Guest Chef Night</li>
+            </ul>
+            <ul>
+              <li>10/3</li>
+              <li>New Menu Samplers!</li>
+            </ul>
+            <ul>
+              <li>10/4</li>
+              <li>Iron Chef Citrus Style</li>
+            </ul>
+          </section>
+        </section>
+      </article>
       <footer class="footer">
         <section>
-          <p>Citrus Café</p>
+          <p>Citrus Cafe</p>
           <p>Helsingintie 666, 00180 Helsinki</p>
           <p>09-66666666</p>
         </section>

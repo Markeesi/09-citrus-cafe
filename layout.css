@@ -1,226 +1,193 @@
 html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  background-color: #83c05b;
-}
-
-article {
-  padding: 1rem;
-  margin-block-end: 1rem;
-}
-
-.container-flex-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo {
-  max-width: 100%;
-}
-.navbar {
-  margin-block-end: 0.5rem;
-}
-.navbar ul {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.navbar ul > * {
-  border: solid green 1px;
-  border-radius: 1rem;
-  box-shadow: 1px 1px black;
-  text-align: center;
-  padding: 1rem;
-  background-color: #9dcd7c;
-  color: white;
-  text-shadow: 0.12rem 0.1rem black;
-}
-
-.maincontent {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-block-end: 1rem;
-}
-
-.maincontent > * {
-  background-color: white;
-  padding: 1rem;
-  flex-basis: 100%;
-}
-/* .specials,
-.events,
-.news {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-} */
-.vision {
-  padding: 1rem;
-  margin-block-end: 1rem;
-}
-
-.vision-inner-box {
-  display: none;
-}
-
-.boxes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.boxes img {
-  max-width: 100%;
-}
-.boxes p {
-  background-color: #cbcbcb;
-  padding: 1rem;
-  margin: 1rem;
-}
-
-.news {
-  display: flex;
-  flex-direction: column;
-}
-
-.news ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.news ul li:first-child {
-  font-weight: 700;
-  width:  4rem;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  font-size: 1.4rem;
-}
-
-.footer section p:nth-child(3) {
-  color: black;
-
-}
-
-@media screen and (min-width: 426px) {
-  /* NAVIGOINTI RIVIIN */
-  .navbar ul {
-    flex-direction: row;
+    font-size: 62.5%;
   }
-  /* NAVIGOINNIN LAPSISTA RUUDULLE SAMANKOKOISET */
-  .navbar ul > * {
-    flex-grow: 1;
-  }
-  /* VISIONLAATIKON TAUSTA VALKOISEKSI KOSKA PADDING */
-  .vision {
-    background-color: white;
-  }
-  /* VISION LAATIKKO FLEXATAAN RIVIIN JA EROTELLAAN TEKSTI JA KUVA
-  LISÄTÄÄN TAUSTAKUVA */
-  .vision-inner-box {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    justify-content: space-between;
-    background-image: url(./images/bg.jpg);
-    padding-inline-start: 1rem;
-  }
-  /* OTETAAN VISIONLAATIKON KUVA NÄKYVIIN TABLETTINÄKYMÄSSÄ */
-  .vision-inner-box figure {
-    display: block;
-    flex-basis: 50%;
-  }
-  /* SIIRRETÄÄN VISIONLAATIKON KUVA FIGURE-LAATIKON OIKEAAN REUNAAN */
-  .vision-inner-box figure img {
-    max-width: 100%;
-    float: right;
-  }
-  /* KESKITETÄÄN VISION-LAATIKON TEKSTI */
-  .vision p {
-    margin: auto 0 auto 0;
-    flex-basis: 80%;
-    font-size: 3.2rem;
-  }
-  /* POISTETAAN TABLETTINÄKYMÄSSÄ YLIMÄÄRÄISET VÄLIT */
-  .flex-main {
-    gap: 0;
-  }
-
-  .background {
-    background-image: url(./assets/background.png);
-  }
-
-  /* KOLMESTA LAATIKOSTA KAKSI ENSIMMÄISTÄ PÄÄSEE VIEREKKÄIN */
-  .specials,
-  .events {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-
-.specials p,
-.events p {
-  display: flex;
-  align-items: center;
-}
-
-.specials img,
-.events img {
-  width: 97%; /* Set your desired width */
-  height: 380px; /* Set your desired height */
-  object-fit: cover; /* Maintain aspect ratio and cover container */
-  margin-left: 1rem;
-
-}
-
-.news p,
-.news table {
-  display: flex;
-  align-items: center;
-}
-
-.news table {
-  width: 100%; 
-  margin-top: 1rem; 
-}
-
-  /* YLIMÄÄRÄISIÄ VÄLEJÄ KORJAILLAAN */
-  .specials {
-    padding-inline-end: 1rem;
-  }
-  .events {
-    padding-inline-start: 1rem;
-  }
-  .news {
-    margin-block-start: 1rem;
-  }
-}
-  /* DESKTOP */
-
-@media screen and (min-width: 769px) {
-  /* KOKO SIVUN REUNOILLE PADDING */
   body {
-    padding: 0 2rem 0 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    background-color: #83c05b;
   }
-  /* YLIMÄÄRÄISIÄ VÄLEJÄ MUOKATAAN */
-  .events {
-    padding-inline-end: 0.5rem;
+  
+  /* WHOLE PAGE IS FLEXED */
+  .flex-page-wrapper {
+    display: flex;
+    flex-direction: column;
   }
-  /* OTETAAN NEWS MUKAAN RIVIIN */
-  .news {
-    flex-basis: 0;
-    flex-grow: 1;
-    margin-block-start: 0;
-    padding-inline-start: 1rem;
+  
+  /* HEADER PICTURE AND LOGO RESPONSIVE */
+  .header figure img {
+    max-width: 100%;
   }
-}
+  
+  /* NAVBAR */
+  .navbar {
+    margin-block-end: 0.5rem;
+  }
+  /* NAVBAR FLEXED IN MOBILE AS ONE COLUMN*/
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  /* NAVBAR BUTTON STYLING */
+  .navbar ul > * {
+    border: solid green 1px;
+    border-radius: 1rem;
+    box-shadow: 1px 1px black;
+    text-align: center;
+    padding: 1rem;
+    background-color: #9dcd7c;
+    color: white;
+    text-shadow: 0.11rem 0.1rem black;
+  }
+  
+  /* ARTICLE BOX */
+  .article {
+    padding: 1rem;
+    margin-block-end: 1rem;
+  }
+  /* ARTICLE BOX HIDDEN IN MOBILE */
+  .article-inner-box figure {
+    display: none;
+  }
+  
+  /* SPECIALS, EVENTS AND NEWS FLEXED IN A COLUMN IN MOBILE */
+  .flex-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block-end: 1rem;
+  }
+  /* SPECIALS, EVENTS AND NEWS FLEXED TO BE THE SAME SIZE*/
+  .flex-main > * {
+    background-color: white;
+    padding: 1rem;
+    flex-basis: 100%;
+  }
+  /* THREE BOXES FLECED IN A COLUMN IN MOBILE */
+  .specials,
+  .events,
+  .specials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /* FLEX BOX HEADERS AND SEPERATING THE ARROWS */
+  .box-headers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #cbcbcb;
+  }
+  /* RESPONSIVENESS OF THE PICTURES IN THE FIRST TWO BOXES */
+  .box-images img {
+    max-width: 100%;
+  }
+  /* THIRD BOXES LIST IN A COLUMN */
+  .newslist {
+    display: flex;
+    flex-direction: column;
+  }
+  /* LIST OF EVENTS IS PUT IN A ROW*/
+  .newslist ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  /* STYLING OF LIST, DATES ARE BOLDED */
+  .newslist ul li:first-child {
+    font-weight: 700;
+    width: 4rem;
+  }
+  
+  /* FOOTER IS STYLED  */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.4rem;
+  }
+  /* PHONE NUMBER IN BLACK */
+  .footer section p:nth-child(3) {
+    color: black;
+  }
+  
+  /* TABLET VIEW */
+  @media screen and (min-width: 426px) {
+    /* NAV TO A ROW */
+    .navbar ul {
+      flex-direction: row;
+    }
+    /* NAVBAR IS STYLED TO GROW AND FIT THE SCREEN */
+    .navbar ul > * {
+      flex-grow: 1;
+    }
+    /* ARTICLE BOX TO WHIT SINCE WE HAVE PADDING */
+    .article {
+      background-color: white;
+    }
+    /* ARTICLE IS STYLED CORRECTLY TO FIT THE BOX */
+    .article-inner-box {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      justify-content: space-between;
+      background-image: url(./assets/background.png);
+      padding-inline-start: 1rem;
+    }
+    /* TAKE THE ARTICLE FIGURE IN TABLET VIEW */
+    .article-inner-box figure {
+      display: block;
+      flex-basis: 50%;
+    }
+    /* PICTURE TO BE RESPONSIVE */
+    .article-inner-box figure img {
+      max-width: 100%;
+    }
+    /* CENTER THE TEXT */
+    .article p {
+      margin: auto 0 auto 0;
+      flex-basis: 80%;
+    }
+    /* REMOVE IN TABLET VIEW EXTRA SPACING*/
+    .flex-main {
+      gap: 0;
+    }
+    /* ALIGN SPECIALS AND EVENTS IN THE FIRST ROW */
+    .specials,
+    .events {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    /* EXTRA SPACING TO BE FIXED */
+    .specials {
+      padding-inline-end: 0.5rem;
+    }
+    .events {
+      padding-inline-start: 0.5rem;
+    }
+    .news {
+      margin-block-start: 1rem;
+    }
+  }
+  
+  /* DESKTOP VIEW */
+  @media screen and (min-width: 769px) {
+    /* THE WHOLE PAGE PADDING IN DESKTOP */
+    body {
+      padding: 0 2rem 0 2rem;
+    }
+    /* FIXING EXTRA SPACING */
+    .events {
+      padding-inline-end: 0.5rem;
+    }
+    /* TAKE THE NEWS IN THE SAME ROW */
+    .news {
+      flex-basis: 0;
+      flex-grow: 1;
+      margin-block-start: 0;
+      padding-inline-start: 0.5rem;
+    }
+  }
